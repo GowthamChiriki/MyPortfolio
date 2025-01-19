@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">John Doe</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Gowtham Sai Chiriki</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="C:\Users\GOWTHAM SAI\OneDrive\Desktop\2025\Portfolio Web\profile-pic.png" alt="Gowtham Profile Picture"/>
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">GOWTHAM CHIRIKI</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <a href="CHIRIKI GOWTHAM SAI.pdf" target="_blank">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('CHIRIKI GOWTHAM SAI.pdf', '_blank'')"
+          >
+            Download CV
+          </button><a>
+       <button class="btn btn-color-1" onclick="showEmail()">
+    Contact Info
+</button>
+
+<p id="email-display" style="display: none; margin-top: 10px;">
+    <a href="javascript:void(0);" id="email-link" onclick="openGmail()">gowthamsai167@gmail.com</a>
+</p>
+
+<script>
+    function showEmail() {
+        var emailDisplay = document.getElementById('email-display');
+        
+        // Toggle the visibility of the email address
+        if (emailDisplay.style.display === 'none' || emailDisplay.style.display === '') {
+            emailDisplay.style.display = 'block';
+        } else {
+            emailDisplay.style.display = 'none';
+        }
+    }
+
+    function openGmail() {
+        // Open Gmail with the email address pre-filled
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gowthamsai167@gmail.com', '_blank');
+    }
+</script>
+
+
+
+
+        </div>
+        <div id="socials-container">
+          <img
+   	 src="linkedin.png"
+   	 alt="My LinkedIn profile"
+   	 class="icon"
+    	onclick="window.open('https://www.linkedin.com/in/gowtham-sai-chiriki', '_blank')"/>
+
+          <img
+            src="github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https://github.com/GowthamChiriki', '_blank')"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>0 YEARS <br />Fresher</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Tech - CSE (Bachelors Degree)<br />Specialized in Data Science and Machine Learning</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+             Aspiring Computer Science Engineer | Focused on Data Science, Machine Learning, and AI
+
+A dedicated Computer Science Engineering student with a strong foundation in Data Science, Machine Learning, and Artificial Intelligence. Passionate about leveraging innovative technologies to develop impactful solutions and address real-world challenges.
+
+Committed to continuous learning and staying updated with advancements in technology to build scalable and efficient systems.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+    src="arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="scrollToExperience()"
+/>
+
+<script>
+    function scrollToExperience() {
+        // Get the Experience section
+        var experienceSection = document.getElementById('experience');
+        
+        // Scroll to the Experience section smoothly
+        experienceSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Data Science</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>R Language</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ML ALgos</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Power BI</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Tableau</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>DSA Algos</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Intermediate</p>
+		
+                </div>
+              </article>
+		<article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SpringBoot</h3>
+                  <p>Intermediate</p>
+		
+                </div>
+              </article>
+		<article>
+                <img
+                  src="checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>RDBMS</h3>
+                  <p>Intermediate</p>
+		
+                </div>
+              </article>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+    src="arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="scrollToProjects()"
+/>
+
+<script>
+    function scrollToProjects() {
+        // Get the Projects section
+        var projectsSection = document.getElementById('projects');
+        
+        // Scroll to the Projects section smoothly
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+    src="arrow.png"
+    alt="Arrow icon"
+    class="icon arrow"
+    onclick="scrollToContact()"
+/>
+
+<script>
+    function scrollToContact() {
+        // Get the Contact section
+        var contactSection = document.getElementById('contact');
+        
+        // Scroll to the Contact section smoothly
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+  <a href="javascript:void(0);" onclick="openGmail()">
+    gowthamsai167@gmail.com
+  </a>
+</p>
+
+<script>
+  function openGmail() {
+    // Open Gmail with the email address pre-filled in the compose window
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=gowthamsai167@gmail.com', '_blank');
+  }
+</script>
+
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+  <a href="https://www.linkedin.com/in/gowtham-sai-chiriki" target="_blank">
+    LinkedIn
+  </a>
+</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 GowthamChiriki. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
